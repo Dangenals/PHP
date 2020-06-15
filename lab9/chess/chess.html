@@ -1,0 +1,206 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Chess</title>
+    <link rel="stylesheet" href="chess.css" type="text/css" media="all" />
+    <style>
+    .chessboard {
+        width: 700px;
+        max-width: 700px;
+        height: 700px;
+        position: absolute;
+        z-index: -1;
+    }
+    div>div {
+        color: white;
+    }
+    div p {
+        font-weight: bold;
+    }
+    [input] {
+        font-weight: lighter;
+    }
+    .black {
+        float: left;
+        width: 68px;
+        height: 68px;
+        background-color: #999;
+        font-size:50px;
+        text-align:center;
+    }
+    .white {
+        float: left;
+        width: 68px;
+        height: 68px;
+        background-color: #fff;
+        font-size:50px;
+        text-align:center;
+    }
+    .border{
+        background-color: #5c5757;
+        font-size:25px;
+        text-align: center;
+        color: white;
+        float: left;
+        width: 68px;
+        height: 68px;
+    }
+    body{
+        font-family: 'Oxanium', cursive;
+    }
+    .button_block{
+        padding: 25px;
+        right: 0px;
+        position: absolute;
+    }
+    .rotate{
+        transform: rotate(180deg);
+        margin: -20px;
+    }
+    button {
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 10px 26px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 1450px) {
+        .button_block, .chessboard {
+          position: relative;
+          z-index: 0;
+        }
+      }
+      </style>
+  <script src="chess.js"></script>
+
+  </head>
+
+    <body>
+
+        <div id="rotate" class="chessboard">
+            <div class="border"></div>
+            <div class="border" style="-webkit-transform:rotate(180deg);">A</div>
+            <div class="border" style="-webkit-transform:rotate(180deg);">B</div>
+            <div class="border" style="-webkit-transform:rotate(180deg);">C</div>
+            <div class="border" style="-webkit-transform:rotate(180deg);">D</div>
+            <div class="border" style="-webkit-transform:rotate(180deg);">E</div>
+            <div class="border" style="-webkit-transform:rotate(180deg);">F</div>
+            <div class="border" style="-webkit-transform:rotate(180deg);">G</div>
+            <div class="border" style="-webkit-transform:rotate(180deg);">H</div>
+            <div class="border"></div>
+
+            <div class="border" >8</div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="border"  style="-webkit-transform:rotate(180deg);">8</div>
+
+            <div class="border" >7</div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="border"  style="-webkit-transform:rotate(180deg);">7</div>
+
+            <div class="border" >6</div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="border"  style="-webkit-transform:rotate(180deg);">6</div>
+
+            <div class="border" >5</div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="border"  style="-webkit-transform:rotate(180deg);">5</div>
+
+            <div class="border" >4</div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="border"  style="-webkit-transform:rotate(180deg);">4</div>
+
+            <div class="border">3</div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="border"  style="-webkit-transform:rotate(180deg);">3</div>
+
+            <div class="border" >2</div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="border"  style="-webkit-transform:rotate(180deg);">2</div>
+
+            <div class="border" >1</div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="border"  style="-webkit-transform:rotate(180deg);">1</div>
+
+            <div class="border" style="background-color: green">BAH</div>
+            <div class="border">A</div>
+            <div class="border">B</div>
+            <div class="border">C</div>
+            <div class="border">D</div>
+            <div class="border">E</div>
+            <div class="border">F</div>
+            <div class="border">G</div>
+            <div class="border">H</div>
+            <div class="border"></div>
+          </div>
+          <div class="button_block">
+            <button type="button" onclick="rotate()">ROTATE</button>
+            <button type="button" onclick="colChDefault()" >DEFAULT</button>
+            <button type="button" onclick="colChWood()" >Wood</button>
+            <button type="button" onclick="colChGreen()" >Green</button>
+            <button type="button" onclick="colChMetalic()" >Metalic</button>
+            <button type="button" onclick="colChAqua()">Aqua</button>
+            <button type="button" onclick="colChYellow()">Yelow</button>
+            <p id="qwe"></p>
+          </div>
+    </body>
+</html>
